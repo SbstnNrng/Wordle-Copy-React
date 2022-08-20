@@ -1,10 +1,14 @@
 import Navbar from './components/Navbar';
+import Board from './components/Board';
+import Keyboard from './components/Keyboard';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <h1>HELLO WORLD</h1>
+      <Board />
+      <Keyboard />
     </div>
   );
 }

@@ -1,0 +1,23 @@
+.boardletter {
+    border: 1px solid black;
+    width: 50px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.line1, .line2, .line3 {
+    display: flex;
+    flex-direction: row;
+}
+
+.key {
+    border: 1px solid black;
+    width: 20px;
+    text-align: center;
+}
