@@ -1,12 +1,20 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(209, 209, 209);
+}
+
 .boardletter {
-    border: 1px solid black;
-    width: 50px;
-    height: 50px;
+    border: 2px solid black;
+    width: 60px;
+    height: 60px;
     text-align: center;
     padding: 0;
     margin: 0px 5px;
-    font-size: 30px;
-    line-height: 50px;
+    font-size: 38px;
+    line-height: 60px;
+    border-radius: 5px;
+    background-color: rgb(230, 230, 230);
+    box-shadow: 2px 2px;
 }
 
 .row {
@@ -16,22 +24,41 @@
     justify-content: center;
 }
 
-.line1, .line2, .line3, .line4 {
+.line1, .line2, .line3 {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
+.line4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.line4 .key {
+    width: 150px;
+}
+
 .key {
-    border: 1px solid black;
-    min-width: 20px;
+    border: 2px solid black;
+    min-width: 30px;
+    min-height: 30px;
     padding: 5px;
     margin: 2px;
     text-align: center;
+    border-radius: 5px;
+    line-height: 30px;
+    background-color: white;
+    box-shadow: 2px 2px;
+    font-size: 24px;
 }
 
 .game {
-    padding: 0;
+    padding: 20px 0;
     margin: 0 auto;
-    width: 400px;
+    width: 500px;
+    background-color: rgb(170, 170, 170);
+    border: 5px solid black;
+    border-radius: 20px;
 }
