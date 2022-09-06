@@ -23,6 +23,10 @@ function Keyboard() {
           return <Key keyVal={key} />
         })}
       </div>
+      <div className="line4">
+      <Key keyVal={"ENTER"} />
+      <Key keyVal={"DELETE"} />
+      </div>
     </div>
   )
 }

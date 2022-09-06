@@ -3,22 +3,35 @@
     width: 50px;
     height: 50px;
     text-align: center;
-    margin-left: 10px;
+    padding: 0;
+    margin: 0px 5px;
+    font-size: 30px;
+    line-height: 50px;
 }
 
 .row {
     display: flex;
     flex-direction: row;
     margin-bottom: 10px;
+    justify-content: center;
 }
 
-.line1, .line2, .line3 {
+.line1, .line2, .line3, .line4 {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .key {
     border: 1px solid black;
-    width: 20px;
+    min-width: 20px;
+    padding: 5px;
+    margin: 2px;
     text-align: center;
+}
+
+.game {
+    padding: 0;
+    margin: 0 auto;
+    width: 400px;
 }

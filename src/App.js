@@ -28,17 +28,19 @@ function App() {
 
   return (
     <div className="App">
-      <AppContext.Provider value={{ 
-        board,
-        setBoard,
-        onSelectLetter,
-        currAttempt,
-        setCurrAttempt
-      }}>
       <Navbar />
-      <Board />
-      <Keyboard />
-      </AppContext.Provider>
+      <div className="game">
+        <AppContext.Provider value={{ 
+          board,
+          setBoard,
+          onSelectLetter,
+          currAttempt,
+          setCurrAttempt
+        }}>
+        <Board />
+        <Keyboard />
+        </AppContext.Provider>
+      </div>
     </div>
   );
 }
