@@ -62,3 +62,19 @@ body {
     border: 5px solid black;
     border-radius: 20px;
 }
+
+#correct {
+    background-color: green;
+}
+
+#almost {
+    background-color: #ebfc00;
+  }
+  
+#error {
+    background-color: #616063;
+  }
+
+#disabled {
+    background-color: #616063;
+  }

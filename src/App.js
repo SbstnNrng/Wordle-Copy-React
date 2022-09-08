@@ -18,6 +18,7 @@ function App() {
   const [board, setBoard] = useState(boardDefault);
   const [currAttempt, setCurrAttempt] = useState({attempt: 0, letterPos: 0});
   const [correctWord, setCorrectWord] = useState("polis");
+  const [disabledLetters, setDisabledLetters] = useState([]);
 
   const onSelectLetter = (keyVal) => {
     if (currAttempt.letterPos > 4) return;
@@ -62,7 +63,10 @@ function App() {
           onEnter,
           onDelete,
           currAttempt,
-          setCurrAttempt
+          setCurrAttempt,
+          disabledLetters,
+          setDisabledLetters,
+          correctWord
         }}>
         <Board />
         <Keyboard />

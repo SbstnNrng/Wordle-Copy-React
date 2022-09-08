@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { AppContext } from "../App";
 
-function Key({keyVal}) {
+function Key({keyVal, disabled}) {
   const {
     onDelete,
     onEnter,
@@ -19,7 +19,7 @@ function Key({keyVal}) {
   }
 
   return (
-    <div className="key" onClick={selectInput}>
+    <div className="key" onClick={selectInput} id={ disabled && "disabled"}>
       { keyVal }
     </div>
   )
