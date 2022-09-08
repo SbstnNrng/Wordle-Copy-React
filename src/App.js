@@ -26,14 +26,29 @@ function App() {
     setCurrAttempt({ attempt: currAttempt.attempt, letterPos: currAttempt.letterPos + 1});
   };
 
+  const onDelete = () => {
+    if (currAttempt.letterPos === 0) return;
+    const newBoard = [...board];
+    newBoard[currAttempt.attempt][currAttempt.letterPos - 1] = "";
+    setBoard(newBoard);
+    setCurrAttempt({...currAttempt, letterPos: currAttempt.letterPos - 1});
+  };
+
+  const onEnter = () => {
+    if (currAttempt.letterPos !== 5) return;
+    setCurrAttempt({attempt: currAttempt.attempt + 1, letterPos: 0});
+  };
+
   return (
     <div className="App">
       <Navbar />
       <div className="game">
-        <AppContext.Provider value={{ 
+        <AppContext.Provider value={{
           board,
           setBoard,
           onSelectLetter,
+          onEnter,
+          onDelete,
           currAttempt,
           setCurrAttempt
         }}>
