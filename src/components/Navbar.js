@@ -3,7 +3,7 @@ import React from "react";
 function Navbar() {
   return (
     <nav>
-      <h1>NAV</h1>
+      <h1>Wordle Copy</h1>
     </nav>
   )
 }
