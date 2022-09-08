@@ -17,6 +17,7 @@ function App() {
   ];
   const [board, setBoard] = useState(boardDefault);
   const [currAttempt, setCurrAttempt] = useState({attempt: 0, letterPos: 0});
+  const [correctWord, setCorrectWord] = useState("polis");
 
   const onSelectLetter = (keyVal) => {
     if (currAttempt.letterPos > 4) return;
@@ -36,6 +37,17 @@ function App() {
 
   const onEnter = () => {
     if (currAttempt.letterPos !== 5) return;
+
+    let currWord = "";
+    for (let i = 0; i < 5; i++) {
+      currWord += board[currAttempt.attempt][i];
+    }
+
+    if (currWord.toLowerCase() === correctWord) {
+      alert("GRATTIS");
+      return;
+    }
+
     setCurrAttempt({attempt: currAttempt.attempt + 1, letterPos: 0});
   };
 
